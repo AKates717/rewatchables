@@ -1,0 +1,120 @@
+---
+title: "Rewatchables"
+format:
+  dashboard:
+    logo: "images/rewatch_logo.jpeg"
+    orientation: columns
+---
+
+## Column {width="35%"}
+
+```{r, loadpackages}
+#| echo: false
+#| include: false
+
+library(tidyverse)
+library(httr2)
+
+
+```
+
+```{r, createaccesstoken}
+#| echo: false
+#| include: false
+
+# client_id <- Sys.getenv("SPOTIFY_CLIENT_ID")
+# client_secret <- Sys.getenv("SPOTIFY_CLIENT_SECRET")
+# 
+# # curl_translate('curl -X POST "https://accounts.spotify.com/api/token" \
+# #      -H "Content-Type: application/x-www-form-urlencoded" \
+# #      -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
+# # ')
+# 
+# req_access_token <- request("https://accounts.spotify.com/api/token") |> 
+#   req_method("POST") |> 
+#   req_body_raw(paste0(
+#     "grant_type=client_credentials&client_id=",
+#     client_id,
+#     "&client_secret=",
+#     client_secret 
+#     ), "application/x-www-form-urlencoded") |> 
+#   req_perform() |>
+#   resp_body_json()
+# 
+# access_token <- req_access_token$access_token
+```
+
+```{r, episodes_function}
+#| echo: false
+#| include: false
+
+# show_id <- "1lUPomulZRPquVAOOd56EW"
+# 
+# 
+# get_all_episodes <- function(show_id, access_token) {
+#   limit <- 50
+#   offset <- 0
+#   all_episodes <- list()
+#   
+#   repeat {
+#     url <- paste0("https://api.spotify.com/v1/shows/", show_id, "/episodes")
+#     
+#     resp <- request(url) |>
+#       req_headers(Authorization = paste("Bearer", access_token)) |>
+#       req_url_query(limit = limit, offset = offset) |>
+#       req_perform()
+#     
+#     content <- resp |> resp_body_json()
+#     
+#     # Append items
+#     all_episodes <- append(all_episodes, content$items)
+#     
+#     # Break if there's no more 'next' page
+#     if (is.null(content[["next"]])) {
+#       break
+#     }
+#     
+#     offset <- offset + limit
+#   }
+#   
+#   # Convert to dataframe
+#   df <- map_dfr(all_episodes, function(ep) {
+#     tibble(
+#       name = ep$name,
+#       release_date = ep$release_date,
+#       duration_ms = ep$duration_ms,
+#       description = ep$description,
+#       episode_url = ep$external_urls$spotify
+#     )
+#   })
+#   
+#   return(df)
+# }
+
+
+```
+
+```{r, episodes_table}
+# show_id <- "1lUPomulZRPquVAOOd56EW"
+# episodes_df <- get_all_episodes(show_id, access_token)
+# 
+# episodes_df %>%
+# slice_head(n = 10)
+
+head(starwars)
+
+```
+
+## Column {width="65%"}
+
+### Row {height="10%"}
+
+Text
+
+### Row {height="70%"}
+
+Text
+
+### Row {height="20%"}
+
+text
