@@ -14,7 +14,7 @@ format:
 
 library(tidyverse)
 library(httr2)
-
+library(gt)
 
 ```
 
@@ -85,7 +85,8 @@ get_all_episodes <- function(show_id, access_token) {
       duration_ms = ep$duration_ms,
       description = ep$description,
       episode_url = ep$external_urls$spotify,
-      episode_id = ep$id
+      episode_id = ep$id,
+      image_url = ep$images[[1]]$url
     )
   })
 
@@ -112,11 +113,42 @@ episodes_df <- episodes_df %>%
     
     guests = ifelse(guests_raw == "", NA, guests_raw)
   ) %>%
-  select(movie, guests, name, release_date, duration_ms, description, episode_id, episode_url)
+  select(movie, guests, name, release_date, duration_ms, description, episode_id, episode_url, image_url)
+
+# episodes_df %>%
+#   slice_head(n=10)
+
+```
+
+```{r, table}
 
 episodes_df %>%
-  slice_head(n=10)
-
+  select(image_url,movie, guests, duration_ms) %>%
+  gt() %>%
+  cols_label(
+    image_url = md("**Movie**"),
+    movie = "",
+    guests = md("**Hosts**"),
+    duration_ms = html('<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,255.998,255.998"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12,2c-5.523,0 -10,4.477 -10,10c0,5.523 4.477,10 10,10c5.523,0 10,-4.477 10,-10c0,-5.523 -4.477,-10 -10,-10zM14.586,16l-3.293,-3.293c-0.188,-0.188 -0.293,-0.442 -0.293,-0.707v-5c0,-0.552 0.448,-1 1,-1v0c0.552,0 1,0.448 1,1v4.586l3,3c0.39,0.39 0.39,1.024 0,1.414v0c-0.39,0.39 -1.024,0.39 -1.414,0z"></path></g></g></svg>')
+  ) %>%
+  text_transform(
+    fn = function(x) {
+      web_image(url = x, height = 50)
+    },
+    locations = cells_body(columns = image_url)
+  ) %>%
+  fmt(
+    columns = duration_ms,
+    fns = function(x){
+      minutes <- floor(x / 60000)
+      seconds <- round((x %% 60000) / 1000)
+      sprintf("%d:%02d", minutes, seconds)
+    }
+  ) %>%
+  tab_options(
+    table.font.color = "#FFFFFF",
+    table.background.color = "#191414"
+  )
 ```
 
 ## Column {width="65%"}
@@ -168,4 +200,4 @@ html`<iframe class="custom-iframe" style="border-radius:12px; display: flex; jus
 
 ### Row {height="20%"}
 
-text
+Podcast Description
