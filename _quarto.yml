@@ -2,13 +2,21 @@ project:
   type: website
 
 website:
-  title: "rewatchables"
+  title: "Rewatchables"
+  favicon: images/logo.png
+  page-navigation: true
+  site-url: https://akates717.github.io/rewatchables/
+  repo-url: https://github.com/AKates717/rewatchables
+  repo-actions: [edit, source, issue]
   sidebar:
+    title: "Rewatchables"
+    style: "docked"
+    search: false
+    collapse-level: 1
+    logo: images/logo.png
     contents:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
       - href: dashboard.qmd
         text: Dashboard
 
@@ -16,7 +24,9 @@ format:
   html:
     theme: [cosmo, custom.scss]
     css: styles.css
-    toc: true
+    toc: false
+    grid:
+      sidebar-width: 150px
 
 editor: visual
 
