@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Rewatchables Dashboard – Rewatchables</title>
+<title>drafts – Rewatchables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +65,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./dashboard.html" rel="next">
 <link href="./images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -69,56 +103,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Rewatchables</a> 
-    </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dashboard</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -126,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rewatchables Dashboard</h1>
+<h1 class="title">drafts</h1>
 </div>
 
 
@@ -143,15 +140,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a dashboard which allows you to easily find any episode of the Rewatchables podcast.</p>
-<p>If you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.</p>
-<p>You can also sort the movies alphabetically or by podcast release date.</p>
-<p>Other options include</p>
-<p>-Search a host name to see which movies they’ve been on for</p>
+<div class="cell" data-expandable="false">
+<div class="sourceCode cell-code" id="cb1" data-startfrom="11" data-source-offset="-48"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 10;"><span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>episodes <span class="op">=</span> <span class="fu">transpose</span>(episodes_df_ojs)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a dropdown menu of episodes</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>viewof episodeDropdown <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  episodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">movie</span>)<span class="op">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Movie:"</span><span class="op">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell" data-expandable="false">
+<div class="sourceCode cell-code" id="cb2" data-startfrom="26" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;iframe class="custom-iframe" style="border-radius:12px; display: flex; justify-content: center; align-items: center;" </span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="vs">  src=</span><span class="sc">${</span><span class="vs">`https://open.spotify.com/embed/episode/</span><span class="sc">${</span>episodes<span class="op">.</span><span class="fu">find</span>(episode <span class="kw">=&gt;</span> episode<span class="op">.</span><span class="at">movie</span> <span class="op">===</span> episodeDropdown)<span class="op">.</span><span class="at">episode_id</span><span class="sc">}</span><span class="vs">/video?utm_source=generator&amp;theme=0`</span><span class="sc">}</span><span class="vs"> </span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="vs">  width="100%" </span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="vs">  height="352" </span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="vs">  frameBorder="0" </span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="vs">  allowfullscreen="" </span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="vs">  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" </span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="vs">  loading="lazy"&gt;</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/iframe&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
 
 
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuLy8gVHJhbnNwb3NlIHRoZSBkYXRhIHRvIG1ha2UgaXQgdXNhYmxlIGluIG9qc1xuZXBpc29kZXMgPSB0cmFuc3Bvc2UoZXBpc29kZXNfZGZfb2pzKVxuXG4vLyBDcmVhdGUgYSBkcm9wZG93biBtZW51IG9mIGVwaXNvZGVzXG52aWV3b2YgZXBpc29kZURyb3Bkb3duID0gSW5wdXRzLnNlbGVjdChcbiAgZXBpc29kZXMubWFwKGQgPT4gZC5tb3ZpZSksXG4gIHtcbiAgICBsYWJlbDogXCJNb3ZpZTpcIixcbiAgICB1bmlxdWU6IHRydWVcbiAgfVxuKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5odG1sYDxpZnJhbWUgY2xhc3M9XCJjdXN0b20taWZyYW1lXCIgc3R5bGU9XCJib3JkZXItcmFkaXVzOjEycHg7IGRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyO1wiIFxuICBzcmM9JHtgaHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL2VtYmVkL2VwaXNvZGUvJHtlcGlzb2Rlcy5maW5kKGVwaXNvZGUgPT4gZXBpc29kZS5tb3ZpZSA9PT0gZXBpc29kZURyb3Bkb3duKS5lcGlzb2RlX2lkfS92aWRlbz91dG1fc291cmNlPWdlbmVyYXRvciZ0aGVtZT0wYH0gXG4gIHdpZHRoPVwiMTAwJVwiIFxuICBoZWlnaHQ9XCIzNTJcIiBcbiAgZnJhbWVCb3JkZXI9XCIwXCIgXG4gIGFsbG93ZnVsbHNjcmVlbj1cIlwiIFxuICBhbGxvdz1cImF1dG9wbGF5OyBjbGlwYm9hcmQtd3JpdGU7IGVuY3J5cHRlZC1tZWRpYTsgZnVsbHNjcmVlbjsgcGljdHVyZS1pbi1waWN0dXJlXCIgXG4gIGxvYWRpbmc9XCJsYXp5XCI+XG48L2lmcmFtZT5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2VwaXNvZGVEcm9wZG93bicpIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -551,18 +596,9 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./dashboard.html" class="pagination-link" aria-label="Dashboard">
-        <span class="nav-page-text">Dashboard</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/AKates717/rewatchables/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AKates717/rewatchables/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AKates717/rewatchables/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/AKates717/rewatchables/edit/main/drafts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AKates717/rewatchables/blob/main/drafts.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/AKates717/rewatchables/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

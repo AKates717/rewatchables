@@ -1,22 +1,26 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "drafts.html",
+    "href": "drafts.html",
+    "title": "drafts",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "About"
-    ]
+    "text": "episodes = transpose(episodes_df_ojs)\n\n// Create a dropdown menu of episodes\nviewof episodeDropdown = Inputs.select(\n  episodes.map(d =&gt; d.movie),\n  {\n    label: \"Movie:\",\n    unique: true\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;iframe class=\"custom-iframe\" style=\"border-radius:12px; display: flex; justify-content: center; align-items: center;\" \n  src=${`https://open.spotify.com/embed/episode/${episodes.find(episode =&gt; episode.movie === episodeDropdown).episode_id}/video?utm_source=generator&theme=0`} \n  width=\"100%\" \n  height=\"352\" \n  frameBorder=\"0\" \n  allowfullscreen=\"\" \n  allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" \n  loading=\"lazy\"&gt;\n&lt;/iframe&gt;`"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "rewatchables",
+    "title": "Rewatchables Dashboard",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
+    "text": "This is a dashboard which allows you to easily find any episode of the Rewatchables podcast.\nIf you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.\nYou can also sort the movies alphabetically or by podcast release date.\nOther options include\n-Search a host name to see which movies they’ve been on for",
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]
