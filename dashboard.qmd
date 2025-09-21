@@ -3,10 +3,9 @@ title: "Rewatchables Dashboard"
 format:
   dashboard:
     logo: "images/logo.png"
-    orientation: columns
+    logo-href: https://github.com/AKates717/rewatchables
+    orientation: rows
 ---
-
-## Column {width="55%"}
 
 ```{r, loadpackages}
 #| echo: false
@@ -121,6 +120,73 @@ episodes_df <- episodes_df %>%
 
 ```
 
+
+
+## Row
+
+### Column {width="45%"}
+
+```{r, sendtoojs}
+#| echo: false
+#| include: false
+
+ojs_define(episodes_df_ojs = episodes_df)
+
+```
+
+```{ojs}
+//| expandable: false
+
+episodes = transpose(episodes_df_ojs);
+
+viewof selectedEpisodeId = {
+  const input = Inputs.text({ label: "", value: episodes.length > 0 ? episodes[0].episode_id : "" });
+  input.style.display = "none";
+
+  window.addEventListener("episodeSelected", e => {
+    input.value = e.detail;
+    input.dispatchEvent(new Event("input"));
+  });
+
+  return input;
+}
+
+html`<div style="width: 100%; display: flex; justify-content: center; margin-top: 1em;">
+  <iframe
+    style="border-radius:12px; width: 100%; max-width: 700px;"
+    src=${`https://open.spotify.com/embed/episode/${selectedEpisodeId}/video?utm_source=generator&theme=0`}
+    height="352"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>`
+
+
+
+```
+
+
+
+```{ojs}
+//| output: false
+document.addEventListener("click", (e) => {
+  // Look for clicked elements with the "clickable-episode" class
+  if (e.target.classList.contains("clickable-episode")) {
+    const episodeId = e.target.getAttribute("data-episode-id");
+    if (episodeId) {
+      const event = new CustomEvent("episodeSelected", {
+        detail: episodeId
+      });
+      window.dispatchEvent(event);
+    }
+  }
+});
+```
+
+### Column {width="45%"}
+
 ```{r, table}
 
 text_link <- function(movie, episode_id) {
@@ -202,67 +268,4 @@ mutate(movie = mapply(text_link, movie, episode_id)) %>%
 
 ```
 
-## Column {width="45%"}
 
-### Row {height="10%"}
-
-### Row {height="70%"}
-
-```{r, sendtoojs}
-#| echo: false
-#| include: false
-
-ojs_define(episodes_df_ojs = episodes_df)
-
-```
-
-```{ojs}
-//| expandable: false
-
-episodes = transpose(episodes_df_ojs);
-
-viewof selectedEpisodeId = {
-  const input = Inputs.text({ label: "", value: episodes.length > 0 ? episodes[0].episode_id : "" });
-  input.style.display = "none";
-
-  window.addEventListener("episodeSelected", e => {
-    input.value = e.detail;
-    input.dispatchEvent(new Event("input"));
-  });
-
-  return input;
-}
-
-html`<div style="width: 100%; display: flex; justify-content: center; margin-top: 1em;">
-  <iframe
-    style="border-radius:12px; width: 100%; max-width: 700px;"
-    src=${`https://open.spotify.com/embed/episode/${selectedEpisodeId}/video?utm_source=generator&theme=0`}
-    height="352"
-    frameBorder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
-</div>`
-
-
-
-```
-
-### Row {height="20%"}
-
-```{ojs}
-//| output: false
-document.addEventListener("click", (e) => {
-  // Look for clicked elements with the "clickable-episode" class
-  if (e.target.classList.contains("clickable-episode")) {
-    const episodeId = e.target.getAttribute("data-episode-id");
-    if (episodeId) {
-      const event = new CustomEvent("episodeSelected", {
-        detail: episodeId
-      });
-      window.dispatchEvent(event);
-    }
-  }
-});
-```

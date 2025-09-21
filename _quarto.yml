@@ -14,6 +14,7 @@ website:
     search: false
     collapse-level: 1
     logo: images/logo.png
+    logo-href: https://github.com/AKates717/rewatchables
     contents:
       - href: index.qmd
         text: Home
@@ -23,7 +24,6 @@ website:
 format:
   html:
     theme: [cosmo, custom.scss]
-    css: styles.css
     toc: false
     grid:
       sidebar-width: 150px

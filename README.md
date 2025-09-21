@@ -1,3 +1,13 @@
-# Content
+# Rewatchables Movie Finder
 
-Soem text.
+This is a dashboard which allows you to easily find any episode of the Rewatchables podcast from The Ringer.
+
+If you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.
+
+Other options include:
+
+-   Sort the movies alphabetically or by podcast release date.
+
+-   Search a host name to see which episodes they've hosted.
+
+When you find the episode you are looking for, click on the movie title in the table, and the episode will pop up on your screen. You can watch or listen directly on the dashboard, or you can click on the Spotify logo to open the episode in the Spotify app.
