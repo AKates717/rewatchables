@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Rewatchables Dashboard",
     "section": "",
-    "text": "This is a dashboard which allows you to easily find any episode of the Rewatchables podcast.\nIf you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.\nYou can also sort the movies alphabetically or by podcast release date.\nOther options include\n-Search a host name to see which movies they’ve been on for",
+    "text": "This is a dashboard which allows you to easily find any episode of the Rewatchables podcast from The Ringer.\nIf you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.\nOther options include:\n\nSort the movies alphabetically or by podcast release date.\nSearch a host name to see which episodes they’ve hosted.\n\nWhen you find the episode you are looking for, click on the movie title in the table, and the episode will pop up on your screen. You can watch or listen directly on the dashboard, or you can click on the Spotify logo to open the episode in the Spotify app.",
     "crumbs": [
       "Home"
     ]

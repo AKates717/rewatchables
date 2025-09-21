@@ -108,7 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -142,16 +141,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell" data-expandable="false">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="11" data-source-offset="-48"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 10;"><span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>episodes <span class="op">=</span> <span class="fu">transpose</span>(episodes_df_ojs)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a dropdown menu of episodes</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>viewof episodeDropdown <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  episodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">movie</span>)<span class="op">,</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Movie:"</span><span class="op">,</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="10" data-source-offset="-48"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>episodes <span class="op">=</span> <span class="fu">transpose</span>(episodes_df_ojs)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a dropdown menu of episodes</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>viewof episodeDropdown <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  episodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">movie</span>)<span class="op">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Movie:"</span><span class="op">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -168,15 +167,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-expandable="false">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="26" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;iframe class="custom-iframe" style="border-radius:12px; display: flex; justify-content: center; align-items: center;" </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="vs">  src=</span><span class="sc">${</span><span class="vs">`https://open.spotify.com/embed/episode/</span><span class="sc">${</span>episodes<span class="op">.</span><span class="fu">find</span>(episode <span class="kw">=&gt;</span> episode<span class="op">.</span><span class="at">movie</span> <span class="op">===</span> episodeDropdown)<span class="op">.</span><span class="at">episode_id</span><span class="sc">}</span><span class="vs">/video?utm_source=generator&amp;theme=0`</span><span class="sc">}</span><span class="vs"> </span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="vs">  width="100%" </span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="vs">  height="352" </span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="vs">  frameBorder="0" </span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="vs">  allowfullscreen="" </span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="vs">  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" </span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="vs">  loading="lazy"&gt;</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/iframe&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="23" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;iframe class="custom-iframe" style="border-radius:12px; display: flex; justify-content: center; align-items: center;" </span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="vs">  src=</span><span class="sc">${</span><span class="vs">`https://open.spotify.com/embed/episode/</span><span class="sc">${</span>episodes<span class="op">.</span><span class="fu">find</span>(episode <span class="kw">=&gt;</span> episode<span class="op">.</span><span class="at">movie</span> <span class="op">===</span> episodeDropdown)<span class="op">.</span><span class="at">episode_id</span><span class="sc">}</span><span class="vs">/video?utm_source=generator&amp;theme=0`</span><span class="sc">}</span><span class="vs"> </span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="vs">  width="100%" </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="vs">  height="352" </span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="vs">  frameBorder="0" </span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="vs">  allowfullscreen="" </span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="vs">  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" </span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="vs">  loading="lazy"&gt;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/iframe&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
