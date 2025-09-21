@@ -4,6 +4,8 @@ title: "Rewatchables Dashboard"
 
 This is a dashboard which allows you to easily find any episode of the Rewatchables podcast from The Ringer.
 
+<https://akates717.github.io/rewatchables/>
+
 If you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.
 
 Other options include:
