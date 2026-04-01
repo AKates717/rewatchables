@@ -1,5 +1,15 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rewatchables Dashboard",
+    "section": "",
+    "text": "This is a dashboard which allows you to easily find any episode of the Rewatchables podcast from The Ringer.\nhttps://akates717.github.io/rewatchables/\nIf you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.\nOther options include:\n\nSort the movies alphabetically or by podcast release date.\nSearch a host name to see which episodes they’ve hosted.\n\nWhen you find the episode you are looking for, click on the movie title in the table, and the episode will pop up on your screen. You can watch or listen directly on the dashboard, or you can click on the Spotify logo to open the episode in the Spotify app.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -12,15 +22,5 @@
     "title": "drafts",
     "section": "",
     "text": "episodes = transpose(episodes_df_ojs)\n\n// Create a dropdown menu of episodes\nviewof episodeDropdown = Inputs.select(\n  episodes.map(d =&gt; d.movie),\n  {\n    label: \"Movie:\",\n    unique: true\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;iframe class=\"custom-iframe\" style=\"border-radius:12px; display: flex; justify-content: center; align-items: center;\" \n  src=${`https://open.spotify.com/embed/episode/${episodes.find(episode =&gt; episode.movie === episodeDropdown).episode_id}/video?utm_source=generator&theme=0`} \n  width=\"100%\" \n  height=\"352\" \n  frameBorder=\"0\" \n  allowfullscreen=\"\" \n  allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" \n  loading=\"lazy\"&gt;\n&lt;/iframe&gt;`"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Rewatchables Dashboard",
-    "section": "",
-    "text": "This is a dashboard which allows you to easily find any episode of the Rewatchables podcast from The Ringer.\nhttps://akates717.github.io/rewatchables/\nIf you are looking for a specific movie, just type it into the search box to see if there is an episode for that movie.\nOther options include:\n\nSort the movies alphabetically or by podcast release date.\nSearch a host name to see which episodes they’ve hosted.\n\nWhen you find the episode you are looking for, click on the movie title in the table, and the episode will pop up on your screen. You can watch or listen directly on the dashboard, or you can click on the Spotify logo to open the episode in the Spotify app.",
-    "crumbs": [
-      "Home"
-    ]
   }
 ]
