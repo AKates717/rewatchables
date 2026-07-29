@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://akates717.github.io/rewatchables/index.html</loc>
-    <lastmod>2026-07-22T11:09:00.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://akates717.github.io/rewatchables/about.html</loc>
-    <lastmod>2026-07-22T11:09:00.370Z</lastmod>
+    <loc>https://akates717.github.io/rewatchables/drafts.html</loc>
+    <lastmod>2026-07-29T11:25:00.322Z</lastmod>
   </url>
   <url>
     <loc>https://akates717.github.io/rewatchables/dashboard.html</loc>
-    <lastmod>2026-07-22T11:09:00.370Z</lastmod>
+    <lastmod>2026-07-29T11:25:00.322Z</lastmod>
   </url>
   <url>
-    <loc>https://akates717.github.io/rewatchables/drafts.html</loc>
-    <lastmod>2026-07-22T11:09:00.370Z</lastmod>
+    <loc>https://akates717.github.io/rewatchables/about.html</loc>
+    <lastmod>2026-07-29T11:25:00.322Z</lastmod>
+  </url>
+  <url>
+    <loc>https://akates717.github.io/rewatchables/index.html</loc>
+    <lastmod>2026-07-29T11:25:00.323Z</lastmod>
   </url>
 </urlset>
