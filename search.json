@@ -7,6 +7,13 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "drafts.html",
+    "href": "drafts.html",
+    "title": "drafts",
+    "section": "",
+    "text": "episodes = transpose(episodes_df_ojs)\n\n// Create a dropdown menu of episodes\nviewof episodeDropdown = Inputs.select(\n  episodes.map(d =&gt; d.movie),\n  {\n    label: \"Movie:\",\n    unique: true\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;iframe class=\"custom-iframe\" style=\"border-radius:12px; display: flex; justify-content: center; align-items: center;\" \n  src=${`https://open.spotify.com/embed/episode/${episodes.find(episode =&gt; episode.movie === episodeDropdown).episode_id}/video?utm_source=generator&theme=0`} \n  width=\"100%\" \n  height=\"352\" \n  frameBorder=\"0\" \n  allowfullscreen=\"\" \n  allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" \n  loading=\"lazy\"&gt;\n&lt;/iframe&gt;`"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rewatchables Dashboard",
@@ -15,12 +22,5 @@
     "crumbs": [
       "Home"
     ]
-  },
-  {
-    "objectID": "drafts.html",
-    "href": "drafts.html",
-    "title": "drafts",
-    "section": "",
-    "text": "episodes = transpose(episodes_df_ojs)\n\n// Create a dropdown menu of episodes\nviewof episodeDropdown = Inputs.select(\n  episodes.map(d =&gt; d.movie),\n  {\n    label: \"Movie:\",\n    unique: true\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhtml`&lt;iframe class=\"custom-iframe\" style=\"border-radius:12px; display: flex; justify-content: center; align-items: center;\" \n  src=${`https://open.spotify.com/embed/episode/${episodes.find(episode =&gt; episode.movie === episodeDropdown).episode_id}/video?utm_source=generator&theme=0`} \n  width=\"100%\" \n  height=\"352\" \n  frameBorder=\"0\" \n  allowfullscreen=\"\" \n  allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" \n  loading=\"lazy\"&gt;\n&lt;/iframe&gt;`"
   }
 ]
